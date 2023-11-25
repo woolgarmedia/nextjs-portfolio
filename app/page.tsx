@@ -8,11 +8,6 @@ import meetups from 'public/images/home/meetups.jpg';
 import vercel from 'public/images/home/vercel.jpg';
 import avatar from 'app/avatar.jpg';
 import ViewCounter from 'app/blog/view-counter';
-import {
-  getLeeYouTubeSubs,
-  getVercelYouTubeSubs,
-  getViewsCount,
-} from 'app/db/queries';
 import { Suspense } from 'react';
 import Link from 'next/link';
 
@@ -75,9 +70,6 @@ function ChannelLink({ img, link, name }) {
             <p className="font-medium text-neutral-900 dark:text-neutral-100">
               {name}
             </p>
-            <Suspense fallback={<p className="h-6" />}>
-              <Subs name={name} />
-            </Suspense>
           </div>
         </div>
         <div className="text-neutral-700 dark:text-neutral-300 transform transition-transform duration-300 group-hover:-rotate-12">
@@ -85,21 +77,6 @@ function ChannelLink({ img, link, name }) {
         </div>
       </a>
     </div>
-  );
-}
-
-async function Subs({ name }: { name: string }) {
-  let subscribers;
-  if (name === '@leerob') {
-    subscribers = await getLeeYouTubeSubs();
-  } else {
-    subscribers = await getVercelYouTubeSubs();
-  }
-
-  return (
-    <p className="text-neutral-600 dark:text-neutral-400">
-      {subscribers} subscribers
-    </p>
   );
 }
 
@@ -114,9 +91,6 @@ function BlogLink({ slug, name }) {
           <p className="font-medium text-neutral-900 dark:text-neutral-100">
             {name}
           </p>
-          <Suspense fallback={<p className="h-6" />}>
-            <Views slug={slug} />
-          </Suspense>
         </div>
         <div className="text-neutral-700 dark:text-neutral-300 transform transition-transform duration-300 group-hover:-rotate-12">
           <ArrowIcon />
@@ -124,11 +98,6 @@ function BlogLink({ slug, name }) {
       </a>
     </div>
   );
-}
-
-async function Views({ slug }: { slug: string }) {
-  let views = await getViewsCount();
-  return <ViewCounter allViews={views} slug={slug} />;
 }
 
 export default function Page() {
