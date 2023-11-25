@@ -7,7 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://leerob.io'),
+  metadataBase: new URL('https://blog.woolgarmedia.co.uk'),
   title: {
     default: 'Lee Robinson',
     template: '%s | Lee Robinson',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Lee Robinson',
     description: 'Developer, writer, and creator.',
-    url: 'https://leerob.io',
+    url: 'https://blog.woolgarmedia.co.uk',
     siteName: 'Lee Robinson',
     locale: 'en_US',
     type: 'website',

@@ -1,6 +1,6 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fleerob%2Fleerob.io)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fleerob%2Fblog.woolgarmedia.co.uk)
 
-# leerob.io
+# blog.woolgarmedia.co.uk
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Database**: [Postgres](https://vercel.com/postgres)
@@ -14,14 +14,14 @@
 This application requires Node.js v18.17+.
 
 ```bash
-git clone https://github.com/leerob/leerob.io.git
-cd leerob.io
+git clone https://github.com/leerob/blog.woolgarmedia.co.uk.git
+cd blog.woolgarmedia.co.uk
 pnpm install
 pnpm run setup # Remove all of my personal information
 pnpm dev
 ```
 
-Create a `.env` file similar to [`.env.example`](https://github.com/leerob/leerob.io/blob/main/.env.example).
+Create a `.env` file similar to [`.env.example`](https://github.com/leerob/blog.woolgarmedia.co.uk/blob/main/.env.example).
 
 ## Database Schema
 

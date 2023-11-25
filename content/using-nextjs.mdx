@@ -36,7 +36,7 @@ First, it's important to call out that Remix has pushed the React community forw
 
 Next.js v1 was released in 2016 (just had the 7-year anniversary) and at the time, the Node.js [request](https://nodejs.org/api/http.html#class-httpincomingmessage)/[response](https://nodejs.org/api/http.html#class-httpserverresponse) objects were the de-facto way to build a server-rendered JavaScript framework. We were writing React class components, as well.
 
-Remix v1 was released in 2021. [A lot has changed since then](https://leerob.io/blog/javascript). The web platform is more powerful than ever, and there's an entire new generation of developers learning the web `Request` and `Response` APIs first instead. They're able to learn once, and write the same JavaScript everywhere, reusing their existing knowledge. I love that.
+Remix v1 was released in 2021. [A lot has changed since then](https://blog.woolgarmedia.co.uk/blog/javascript). The web platform is more powerful than ever, and there's an entire new generation of developers learning the web `Request` and `Response` APIs first instead. They're able to learn once, and write the same JavaScript everywhere, reusing their existing knowledge. I love that.
 
 Kent talks about how he prefers tools that give access to the underlying primitives, rather than wrappers, based on his past experience. I can empathize.
 
@@ -99,7 +99,7 @@ In the Next.js App Router, let's say you want to create an arbitrary API endpoin
 
 ```jsx
 export async function GET(request: Request) {
-  const res = await fetch('https://api.leerob.io/...', { ... } )
+  const res = await fetch('https://api.blog.woolgarmedia.co.uk/...', { ... } )
   const data = await res.json()
 
   return Response.json({ data })
@@ -169,7 +169,7 @@ Now you might be thinking: but Lee, that's not what Kent is talking about. He's 
 
 ### Open Source and Framework Boundaries
 
-From my post earlier this year on [funding open source](https://leerob.io/blog/funding-open-source):
+From my post earlier this year on [funding open source](https://blog.woolgarmedia.co.uk/blog/funding-open-source):
 
 > Developers don't want walled gardens. They want the freedom to eject and self-host. It's about control. This is why all Next.js features work self-hosted. Vercel provides [infrastructure](https://vercel.com/enterprise) and a [workflow](https://vercel.com/workflow) on top of Next.js. You can [host Next.js elsewhere](https://nextjs.org/docs/deployment#self-hosting), if you want.
 >
