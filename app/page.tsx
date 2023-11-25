@@ -7,8 +7,6 @@ import filming from 'public/images/home/filming.jpg';
 import meetups from 'public/images/home/meetups.jpg';
 import vercel from 'public/images/home/vercel.jpg';
 import avatar from 'app/avatar.jpg';
-import ViewCounter from 'app/blog/view-counter';
-import { Suspense } from 'react';
 import Link from 'next/link';
 
 function Badge(props) {
