@@ -4,6 +4,7 @@ import { motion, LayoutGroup } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { Suspense } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navItems = {
   '/': {
@@ -26,7 +27,10 @@ export function Navbar() {
             className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
             id="nav"
           >
-            <div className="flex flex-row space-x-0 pr-10">
+            <div className="flex flex-row space-x-0 pr-10 items-center">
+              <Suspense fallback={null}>
+                <NavLogo/>  
+              </Suspense>
               <Suspense fallback={null}>
                 {Object.entries(navItems).map(([path, { name }]) => {
                   return <NavItem key={path} path={path} name={name} />;
@@ -41,6 +45,18 @@ export function Navbar() {
 }
 
 let cx = (...classes) => classes.filter(Boolean).join(' ');
+
+function NavLogo(){
+  return (
+    <div>
+      <Image 
+      src='/images/CW-LOGO.png'
+      alt=""
+      height={50}
+      width={50}/>
+    </div>
+  )
+}
 
 function NavItem({ path, name }: { path: string; name: string }) {
   let pathname = usePathname() || '/';
