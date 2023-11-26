@@ -9,15 +9,15 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 export const metadata: Metadata = {
   metadataBase: new URL('https://blog.woolgarmedia.co.uk'),
   title: {
-    default: 'Lee Robinson',
-    template: '%s | Lee Robinson',
+    default: 'Cal Woolgar',
+    template: '%s | Cal Woolgar',
   },
   description: 'Developer, writer, and creator.',
   openGraph: {
-    title: 'Lee Robinson',
+    title: 'Cal Woolgar',
     description: 'Developer, writer, and creator.',
     url: 'https://blog.woolgarmedia.co.uk',
-    siteName: 'Lee Robinson',
+    siteName: 'WoolgarMedia',
     locale: 'en_US',
     type: 'website',
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: 'Lee Robinson',
+    title: 'Cal Woolgar',
     card: 'summary_large_image',
   },
 };
