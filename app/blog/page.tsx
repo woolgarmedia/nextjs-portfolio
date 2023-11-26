@@ -3,7 +3,7 @@ import { getBlogPosts } from 'app/db/blog';
 
 export const metadata = {
   title: 'Blog',
-  description: 'Read my thoughts on software development, design, and more.',
+  description: 'Read my thoughts on gaming, software, personal development, and more.',
 };
 
 export default function BlogPage() {
@@ -14,6 +14,9 @@ export default function BlogPage() {
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
         read my blog
       </h1>
+      <p className='text-neutral mb-4'>
+        Read my thoughts on gaming, software, personal development, and more.
+      </p>
       {allBlogs
         .sort((a, b) => {
           if (
@@ -30,9 +33,10 @@ export default function BlogPage() {
             href={`/blog/${post.slug}`}
           >
             <div className="w-full flex flex-col">
-              <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
+              <p className="text-blue-600 tracking-tight">
                 {post.metadata.title}
               </p>
+              <p className='text-xs text-neutral-400'>{post.metadata.publishedAt}</p>
             </div>
           </Link>
         ))}
