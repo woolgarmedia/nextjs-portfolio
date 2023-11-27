@@ -1,5 +1,4 @@
 import Image from 'next/image'
-
 export function FaceImageComponent() {
     return (
       <div className=" my-6">

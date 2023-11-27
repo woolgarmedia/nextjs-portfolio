@@ -1,0 +1,42 @@
+.scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+.blog-post {
+  flex: 0 0 auto;
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden; /* Ensure the image does not bleed outside the border-radius */
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  display: block; /* Remove space below the image */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  color: white; /* Text color */
+  padding: 10px; /* Padding inside the overlay */
+}
+
+.title {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.date {
+  font-size: 0.9em;
+  margin: 0;
+}
