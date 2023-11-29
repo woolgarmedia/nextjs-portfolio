@@ -18,6 +18,7 @@ export default function BlogPage() {
         Read my thoughts on gaming, software, personal development, and more.
       </p>
       
+      <h2 className="font-medium text-1xl">latest blogs</h2>
       <ScrollingWrapper allBlogs={allBlogs}/>
     </section>
   );
