@@ -1,5 +1,5 @@
+import ScrollingWrapper from 'app/components/scrollingWrapper';
 import { getBlogPosts } from 'app/db/blog';
-import BlogCard from 'app/components/blogCard';
 
 export const metadata = {
   title: 'Blog',
@@ -17,20 +17,8 @@ export default function BlogPage() {
       <p className='text-neutral mb-4'>
         Read my thoughts on gaming, software, personal development, and more.
       </p>
-      <div className="scrolling-wrapper">
-        {allBlogs
-          .sort((a, b) => {
-            if (
-              new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-            ) {
-              return -1;
-            }
-            return 1;
-          })
-          .map((post, index) => (
-            <BlogCard key={index} {...post.metadata} slug={post.slug} />
-          ))}
-      </div>
+      
+      <ScrollingWrapper allBlogs={allBlogs}/>
     </section>
   );
 }

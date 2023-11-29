@@ -1,8 +1,12 @@
-import { sql } from '@vercel/postgres';
-
 const nextConfig = {
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.modules.push(path.resolve('./node_modules'));
+    }
+    return config;
+  },
   experimental: {
-    ppr: true,
+    ppr: false,
   },
   headers() {
     return [

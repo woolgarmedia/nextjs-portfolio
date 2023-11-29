@@ -1,25 +1,31 @@
+/* styles.css */
 .scrolling-wrapper {
     display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 20px;
+    cursor: grab;
+    user-select: none;
   }
   
-.blog-post {
-  flex: 0 0 auto;
-  width: 300px;
-  border-radius: 8px;
-  overflow: hidden; /* Ensure the image does not bleed outside the border-radius */
-}
-
-.image-container {
-  position: relative;
-}
-
-.image-container img {
-  width: 100%;
-  display: block; /* Remove space below the image */
-}
+  .scrolling-wrapper:active {
+    cursor: grabbing;
+  }
+  
+  .blog-post {
+    flex-shrink: 0;
+    width: 300px; /* Or whatever width you prefer */
+    margin-right: 20px; /* Space between posts */
+  }
+  
+  .image-container {
+    height: 200px; /* Fixed height for all images */
+    position: relative;
+    overflow: hidden; /* Hide the overflow */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container, can be adjusted to 'contain' if needed */
+  }
 
 .overlay {
   position: absolute;

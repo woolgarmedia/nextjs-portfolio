@@ -19,7 +19,7 @@ function parseFrontmatter(fileContent: string) {
 
   return { metadata: metadata as Metadata, content };
 }
-
+ 
 function getMDXFiles(dir) {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx');
 }
@@ -50,5 +50,6 @@ function getMDXData(dir) {
 }
 
 export function getBlogPosts() {
+  console.log(process.cwd())
   return getMDXData(path.join(process.cwd(), 'content'));
 }
