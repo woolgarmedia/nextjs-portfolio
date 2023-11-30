@@ -1,3 +1,4 @@
+import AllBlogList from 'app/components/allBlogList';
 import ScrollingWrapper from 'app/components/scrollingWrapper';
 import { getBlogPosts } from 'app/db/blog';
 
@@ -9,6 +10,17 @@ export const metadata = {
 export default function BlogPage() {
   let allBlogs = getBlogPosts();
 
+  allBlogs = allBlogs.sort((a, b) => {
+    if (
+      new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
+    ) {
+      return -1;
+    }
+    return 1;
+  })
+
+  let latestBlogs = allBlogs.slice(0, 3);
+
   return (
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
@@ -19,7 +31,10 @@ export default function BlogPage() {
       </p>
       
       <h2 className="font-medium text-1xl">latest blogs</h2>
-      <ScrollingWrapper allBlogs={allBlogs}/>
+      <ScrollingWrapper allBlogs={latestBlogs}/>
+
+      <h2 className="font-medium text-1xl">all blogs</h2>
+      <AllBlogList allBlogs={allBlogs}/>
     </section>
   );
 }

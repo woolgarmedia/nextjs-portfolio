@@ -1,8 +1,26 @@
+// Import the path module using ES6 import syntax
+import path from 'path';
+
 const nextConfig = {
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.modules.push(path.resolve('./node_modules'));
     }
+
+    // Add a rule to handle font files
+    config.module.rules.push({
+      test: /\.(eot|woff|woff2|ttf|svg)$/,
+      use: {
+        loader: 'url-loader',
+        options: {
+          limit: 100000,
+          name: '[name].[ext]',
+          publicPath: '/_next/static/fonts/',
+          outputPath: 'static/fonts/'
+        }
+      }
+    });
+
     return config;
   },
   experimental: {

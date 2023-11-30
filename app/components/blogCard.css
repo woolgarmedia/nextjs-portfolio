@@ -1,14 +1,4 @@
-/* styles.css */
-.scrolling-wrapper {
-    display: flex;
-    cursor: grab;
-    user-select: none;
-  }
-  
-  .scrolling-wrapper:active {
-    cursor: grabbing;
-  }
-  
+ 
   .blog-post {
     flex-shrink: 0;
     width: 300px; /* Or whatever width you prefer */
@@ -45,4 +35,12 @@
 .date {
   font-size: 0.9em;
   margin: 0;
+}
+
+.blog-list-item {
+  display: flex;
+}
+
+.blog-list-item img {
+  max-width: 50%;
 }
