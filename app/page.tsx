@@ -1,14 +1,21 @@
+'use client'
+
 import { FaceImageComponent } from "./components/image";
+import { TypewriterH1 } from './components/typewriter';
 
 export default function Page() {
   return (
-    <section>
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">Cal Woolgar</h1>
-      <p className="prose prose-neutral">
-      Hi, I’m Callam Woolgar, a passionate and creative fullstack developer with over 7 years of experience in software development. This site is dedicated to showing off the projects I've done and will do, whilst also providing insightful blog posts about software and my personal development.
-      </p>
-
-      <FaceImageComponent/>
+    <section className="flex gap-4 bg-[url('/images/clouds.jpg')] h-screen justify-center items-center gap-2 px-6">
+      <div className="">
+        <p className='font-extrabold text-5xl tracking-tight text-off-white'>Hey,</p>
+        <TypewriterH1 text='My name is Cal Woolgar' speed={200} className="font-extrabold text-5xl tracking-tight text-almost-black"/>
+        <h2 className="font-medium text-3xl tracking-tight text-almost-black">
+        I’m a full stack developer currently working for Three Rocks Ltd.
+        </h2>
+      </div>
+      <div className="">
+        <FaceImageComponent/>
+      </div>
     </section>
   );
 }

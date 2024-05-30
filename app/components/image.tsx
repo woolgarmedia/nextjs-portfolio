@@ -4,8 +4,8 @@ export function FaceImageComponent() {
       <div className=" my-6">
         <div className={`flex justify-center`}>
           <Image 
-          className='rounded-lg'
-            src='/images/callam.jpeg'
+          className='shadow-xl'
+            src='/images/cartoon-logo.webp'
             alt=''
             height={500}
             width={500}/>

@@ -10,9 +10,6 @@ const navItems = {
   '/': {
     name: 'home',
   },
-  '/work': {
-    name: 'work',
-  },
   '/blog': {
     name: 'blog',
   },
@@ -20,22 +17,20 @@ const navItems = {
 
 export function Navbar() {
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight">
+    <aside className="p-3 tracking-tight shadow-lg">
       <div className="lg:sticky lg:top-20">
         <LayoutGroup>
           <nav
-            className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+            className="flex flex-row items-start relative px-3 fade md:overflow-auto scroll-pr-6 md:relative"
             id="nav"
           >
-            <div className="flex flex-row space-x-0 pr-10 items-center">
-              <Suspense fallback={null}>
+            <div className="flex flex-row justify-between w-full space-x-0 items-center">
                 <NavLogo/>  
-              </Suspense>
-              <Suspense fallback={null}>
-                {Object.entries(navItems).map(([path, { name }]) => {
-                  return <NavItem key={path} path={path} name={name} />;
-                })}
-              </Suspense>
+                <div className='flex gap-2 uppercase font-sans'>
+                  {Object.entries(navItems).map(([path, { name }]) => {
+                    return <NavItem key={path} path={path} name={name} />;
+                  })}
+                </div>
             </div>
           </nav>
         </LayoutGroup>
@@ -49,11 +44,7 @@ let cx = (...classes) => classes.filter(Boolean).join(' ');
 function NavLogo(){
   return (
     <div>
-      <Image 
-      src='/images/CW-LOGO.png'
-      alt=""
-      height={50}
-      width={50}/>
+      <h3 className='font-extrabold uppercase font-sans text-3xl'>Cal Codes</h3>
     </div>
   )
 }

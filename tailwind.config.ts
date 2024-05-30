@@ -17,6 +17,10 @@ export default {
           },
         },
       },
+      colors: {
+        'almost-black': '#292929',
+        'off-white': '#DAE3E5'
+      },
     },
   },
   future: {

@@ -32,6 +32,7 @@
     "swr": "^2.2.4",
     "tailwindcss": "^3.3.5",
     "typescript": "5.3.2",
+    "typewriter-effect": "^2.21.0",
     "url-loader": "^4.1.1"
   }
 }
