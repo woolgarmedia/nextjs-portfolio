@@ -18,7 +18,7 @@ export default function AllBlogList({allBlogs}) {
 
     return (
         <div>
-            <div>
+            <div className="grid grid-cols-3 p-10">
                 {paginatedPosts
                 .map((post, index) => (
                   <BlogListItem key={index} {...post.metadata} slug={post.slug} />
