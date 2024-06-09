@@ -7,28 +7,31 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <section className="flex gap-4 bg-[url('/images/clouds.jpg')] h-screen justify-center items-center gap-2 px-6">
-        <div className="">
+      <section className="flex flex-wrap gap-4 bg-[url('/images/clouds.jpg')] h-screen justify-center items-center gap-2 px-6">
+        <div className="min-w-80">
           <p className="font-extrabold text-5xl tracking-tight text-off-white">
             Hey,
           </p>
-          <TypewriterH1
+          {/* <TypewriterH1
             text="My name is Cal Woolgar"
             speed={200}
             className="font-extrabold text-5xl tracking-tight text-almost-black"
-          />
+          /> */}
+          <h1 className="font-extrabold text-5xl tracking-tight text-almost-black">
+            My name is Cal Woolgar
+          </h1>
           <h2 className="font-medium text-3xl tracking-tight text-almost-black">
             I’m a full stack developer currently working for Three Rocks Ltd.
           </h2>
         </div>
-        <div className="">
+        <div className=" min-w-80">
           <FaceImageComponent />
         </div>
       </section>
 
-      <section className="flex gap-4 p-12 justify-center items-center">
-        <div className="flex flex-col w-1/2 max-w-screen-sm">
-          <div id="about-me" className="my-4 px-5 text-center">
+      <section className="flex gap-4 p-12 justify-center items-center flex-wrap min-w-80 w-full">
+        <div className="flex flex-col w-full md:max-w-screen-sm">
+          <div id="about-me" className="my-6 px-5 text-center">
             <h2 className="text-3xl font-medium tracking-tighter pb-2">
               About Me
             </h2>
@@ -43,7 +46,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div id="tech-stack" className="my-4 px-5 text-center">
+          <div id="tech-stack" className="my-6 px-5 text-center">
             <h2 className="text-3xl font-medium tracking-tighter pb-2">
               Tech & Tools
             </h2>
@@ -57,7 +60,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <div className="grid px-4 grid-cols-3 w-1/2 max-w-screen-sm justify-items-center items-center">
+        <div className="grid px-4 grid-cols-3 w-full md:max-w-screen-sm justify-items-center items-center">
           <Image
             src="/images/tech/HTML5_logo_and_wordmark.svg.png"
             alt=""
